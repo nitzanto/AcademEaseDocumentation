@@ -21,7 +21,7 @@
     <li><strong>Data Validation:</strong> Robust data validation is implemented at multiple levels of the application to ensure data integrity and security. Input validation is performed on the server-side to prevent invalid data from being processed.</li>
 </ul>
 
-
+<h2>Resources</h2>
 <h3>Students Resource</h3>
 
 <ul>
