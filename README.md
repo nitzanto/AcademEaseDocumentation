@@ -21,8 +21,10 @@
     <li><strong>Data Validation:</strong> Robust data validation is implemented at multiple levels of the application to ensure data integrity and security. Input validation is performed on the server-side to prevent invalid data from being processed.</li>
 </ul>
 <h2>Design</h2>
-    <img src="https://i.imgur.com/z4o4Cta.png" alt="design" >
-
+<h3>Relationship</h3>
+    <img src="https://i.imgur.com/z4o4Cta.png" alt="design" ></img>
+    <h3>Tables</h3>
+    <img src="https://i.imgur.com/xA89P6I.png" alt="design"></img>
 <h2>Resources</h2>
 <h3>Students Resource</h3>
 
