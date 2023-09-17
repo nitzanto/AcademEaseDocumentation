@@ -152,7 +152,7 @@ Example request body:
 npm install
 npm i nest
 </code></pre>
-    <p>Make sure to have 2 terminals running: One for the container and a second one for running the application</p>
+    <p><strong>Make sure to have 2 terminals running: One for the container and a second one for running the application</strong></p>
     <li>Run the DB container with docker-compose</li>
     <pre><code>docker-compose up</code></pre>
     <li>Connect to the DB through MySQL WorkBench or any other application and then fill in the credentials found at
