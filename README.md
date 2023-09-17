@@ -119,32 +119,40 @@
     more, please refer to the <a href="link-to-your-documentation">API Documentation</a>.</p>
 
   <h2>Installation</h2>
+  <p> Please make sure you have the following installed:</p>
+<ul>
+<li>Docker Desktop to run the container of MySQL DB</li>
+ <li>Node JS ver 18+</li>
+ <li>MySQL Workbench, DBeaver etc.. for viewing the DB in real time</li>
+  <li>Postman, Insomia etc.. for API Testing</li>
+</ul>
 
   <p>To run this project locally, follow these steps:</p>
 
   <ol>
-    <li>Clone the repository to your local machine:</li>
-    <pre>
-      <code>git clone https://github.com/your-username/your-repository.git</code>
-    </pre>
+    <li>Download zipped file on Google Drive:</li>
     <li>Navigate to the project directory:</li>
     <pre>
       <code>cd your-repository</code>
     </pre>
     <li>Install the project dependencies:</li>
     <pre>
-      <code>npm install</code>
+      <code>npm install
+      npm i nest</code>
     </pre>
-    <li>Configure your database connection by updating the database settings in
-      <code>src/config/database.config.ts</code>.</li>
-    <li>Run the application:</li>
+    <p>Make sure to have 2 terminals running: One for the container and a second one for running the application</p>
+    <li>Run the DB container with docker compose
+      <code>docker-compose up</code></li>
+   <li>Connect to the DB through MySQL WorkBench or any other application and then fill in the creditinals found at the .env file</li>
+    <li>Run the application after connecting to the DB:</li>
     <pre>
-      <code>npm run start</code>
+      <code>npm run start:dev</code>
     </pre>
   </ol>
 
   <p>The API should now be running locally and accessible at <a href="http://localhost:3000">http://localhost:3000</a>.
   </p>
+  <p>You may test the API with Postman, Insomia and look at the changes at real time with MySQL Workbench or any other application</p>
 </body>
 
 </html>
