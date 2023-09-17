@@ -1,62 +1,150 @@
-<!-- PROJECT LOGO -->
-<br />
-<div align="center">
-    <img src="https://i.imgur.com/FAa8Lop.png" alt="Logo" width="600" height="300">
-  </a>
+<!DOCTYPE html>
+<html>
 
-  <h3 align="center">AcademEase</h3>
+<body>
 
-  <p align="center">
-   This project is a RESTful API built using NestJS for managing student resources, including their personal information and the courses they have taken each year. The API uses an SQL database with MySQL to store student and course data, and it provides various endpoints to perform operations on students and courses.
-    <br />
-    <br />
-    <br />
-  
-  <h2 align="center"><a>Overview</a></h2>
+ <div align="center">
+       <h1>AcademEase - Student and Course Management API</h1>
+        <img src="https://i.imgur.com/FAa8Lop.png" alt="Logo" width="600" height="300">
+    </div>  
+<h2>Overview</h2>
 
-  <p align="center">
-   The Student and Course Management API allows you to perform the following operations:
+  <p>The Student and Course Management API is a RESTful API built using NestJS for managing student resources,
+    including their personal information and the courses they have taken each year. The API uses an SQL database with MySQL to
+    store student and course data and provides various endpoints to perform operations on students and courses.</p>
 
-Students Resource
-GET /students: Retrieve a list of all students' personal information, including how many courses they have taken. You can also filter students by year.
+  <h3>Students Resource</h3>
 
-GET /students/:student_id: Retrieve specific student's personal information and the number of courses they have taken. You can also filter by year.
+  <ul>
+    <li><strong>GET /students</strong>: Retrieve a list of all students' personal information, including how many
+      courses they have taken. You can also filter students by year.</li>
+    <li><strong>GET /students/:student_id</strong>: Retrieve specific student's personal information and the number of
+      courses they have taken. You can also filter by year.</li>
+    <li><strong>POST /students</strong>: Create a new student.</li>
+    <li><strong>PUT /students/:student_id</strong>: Update a student's personal information.</li>
+    <li><strong>DELETE /students/:student_id</strong>: Delete a student and all related course records.</li>
+  </ul>
 
-POST /students: Create a new student.
+  <h3>Courses Resource</h3>
 
-PUT /students/:student_id: Update a student's personal information.
+  <ul>
+    <li><strong>GET /courses</strong>: Retrieve a list of all courses.</li>
+    <li><strong>GET /courses/:course_name</strong>: Retrieve information about a specific course.</li>
+    <li><strong>POST /courses</strong>: Create a new course for a student.</li>
+    <li><strong>PUT /courses/:course_name</strong>: Update course information.</li>
+    <li><strong>DELETE /courses/:course_name</strong>: Delete a course.</li>
+  </ul>
 
-DELETE /students/:student_id: Delete a student and all related course records.
+  <h2>API Paths</h2>
 
-Courses Resource
-GET /courses: Retrieve a list of all courses.
+  <p>Here are the main API endpoints with examples of how to use them:</p>
 
-GET /courses/:course_name: Retrieve information about a specific course.
+  <pre>
+    <code>
+      Retrieve all students with courses for a specific year:
 
-POST /courses: Create a new course.
+      GET /students?year=&lt;year&gt;
 
-PUT /courses/:course_name: Update course information.
+      Retrieve a specific student with courses for a specific year:
 
-DELETE /courses/:course_name: Delete a course.
-    <br />
-        <br />
-      </p>
-    
-  <h2 align="center"><a>Built With</a></h2>
-    <p align="center">
-       <a href="https://www.python.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/python-colored.svg" width="36" height="36" alt="Python" /></a>
-<a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/html5-colored.svg" width="36" height="36" alt="HTML5" /></a>
-<a href="https://reactjs.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/react-colored.svg" width="36" height="36" alt="React" /></a>
-<a href="https://vitejs.dev/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/vite-colored.svg" width="36" height="36" alt="Vite" /></a>
-<a href="https://tailwindcss.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/tailwindcss-colored.svg" width="36" height="36" alt="TailwindCSS" /></a>
-<a href="https://fastapi.tiangolo.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/fastapi-colored.svg" width="36" height="36" alt="Fast API" /></a>
-    <br />
-      </p>
-</div>
+      GET /students/:student_id?year=&lt;year&gt;
 
-</div>
+      Create a new student:
 
+      POST /students
 
+      Example request body:
 
+      {
+        "first_name": "John",
+        "last_name": "Doe",
+        "address": "123 Main St"
+      }
 
+      Update a student's information:
 
+      PUT /students/:student_id
+
+      Example request body:
+
+      {
+        "first_name": "Updated First Name",
+        "last_name": "Updated Last Name",
+        "address": "Updated Address"
+      }
+
+      Delete a student and related course records:
+
+      DELETE /students/:student_id
+
+      Retrieve a list of all courses:
+
+      GET /courses
+
+      Retrieve information about a specific course:
+
+      GET /courses/:course_name
+
+      Create a new course for a student:
+
+      POST /courses
+
+      Example request body:
+
+      {
+        "course_name": "Mathematics",
+        "year": 2023
+      }
+
+      Update course information:
+
+      PUT /courses/:course_name
+
+      Example request body:
+
+      {
+        "course_name": "Updated Course Name",
+        "year": 2024
+      }
+
+      Delete a course:
+
+      DELETE /courses/:course_name
+    </code>
+  </pre>
+
+  <h2>Documentation</h2>
+
+  <p>For detailed documentation on how to use the API, including request and response formats, error handling, and
+    more, please refer to the <a href="link-to-your-documentation">API Documentation</a>.</p>
+
+  <h2>Installation</h2>
+
+  <p>To run this project locally, follow these steps:</p>
+
+  <ol>
+    <li>Clone the repository to your local machine:</li>
+    <pre>
+      <code>git clone https://github.com/your-username/your-repository.git</code>
+    </pre>
+    <li>Navigate to the project directory:</li>
+    <pre>
+      <code>cd your-repository</code>
+    </pre>
+    <li>Install the project dependencies:</li>
+    <pre>
+      <code>npm install</code>
+    </pre>
+    <li>Configure your database connection by updating the database settings in
+      <code>src/config/database.config.ts</code>.</li>
+    <li>Run the application:</li>
+    <pre>
+      <code>npm run start</code>
+    </pre>
+  </ol>
+
+  <p>The API should now be running locally and accessible at <a href="http://localhost:3000">http://localhost:3000</a>.
+  </p>
+</body>
+
+</html>
