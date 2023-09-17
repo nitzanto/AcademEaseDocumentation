@@ -24,7 +24,7 @@
 <h3>Relationship</h3>
     <img src="https://i.imgur.com/z4o4Cta.png" alt="design" ></img>
     <h3>Tables</h3>
-    <img src="https://i.imgur.com/xA89P6I.png" alt="design"></img>
+    <img src="https://i.imgur.com/tKc8zYM.png" alt="design"></img>
 <h2>Resources</h2>
 <h3>Students Resource</h3>
 
