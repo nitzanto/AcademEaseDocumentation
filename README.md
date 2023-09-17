@@ -12,12 +12,22 @@
     including their personal information and the courses they have taken each year. The API uses an SQL database with MySQL to
     store student and course data and provides various endpoints to perform operations on students and courses.</p>
 
+    
+<h3>Software Engineering Principles</h3>
+
+<ul>
+    <li><strong>SOLID Principles:</strong> The project follows the SOLID principles, ensuring that the codebase is modular, maintainable, and scalable.</li>
+    <li><strong>DRY (Don't Repeat Yourself):</strong> The codebase emphasizes the DRY principle by minimizing code duplication. Reusable components and services are employed to avoid redundancy and maintain code consistency.</li>
+    <li><strong>Data Validation:</strong> Robust data validation is implemented at multiple levels of the application to ensure data integrity and security. Input validation is performed on the server-side to prevent invalid data from being processed.</li>
+</ul>
+
+
 <h3>Students Resource</h3>
 
 <ul>
-    <li><strong>GET /students</strong>: Retrieve a list of all students' personal information, including how many
+    <li><strong>GET /students</strong>: Retrieve a list of all students' personal information, including
         courses they have taken. You can also filter students by year. (OPTIONAL)</li>
-    <li><strong>GET /students/:student_id</strong>: Retrieve specific student's personal information and the number of
+    <li><strong>GET /students/:student_id</strong>: Retrieve specific student's personal information and
         courses they have taken. You can also filter by year. (OPTIONAL)</li>
     <li><strong>POST /students</strong>: Create a new student.</li>
     <li><strong>PUT /students/:student_id</strong>: Update a student's personal information.</li>
@@ -107,7 +117,7 @@ Example request body:
     "year": 2024
 }</code></pre>
 
-<li><p>Unassign students from course/p></li>
+<li><p>Unassign students from course</p></li>
 <pre><code>PUT /courses/unassign/:course_name</code></pre>
 <pre><code>Example request body:
 {
