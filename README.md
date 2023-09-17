@@ -18,7 +18,7 @@
 <ul>
     <li><strong>SOLID Principles:</strong> The project follows the SOLID principles, ensuring that the codebase is modular, maintainable, and scalable.</li>
     <li><strong>DRY (Don't Repeat Yourself):</strong> The codebase emphasizes the DRY principle by minimizing code duplication. Reusable components and services are employed to avoid redundancy and maintain code consistency.</li>
-    <li><strong>Data Validation:</strong> Robust data validation is implemented at multiple levels of the application to ensure data integrity and security. Input validation is performed on the server-side to prevent invalid data from being processed.</li>
+    <li><strong>Data Validation:</strong>Data validation is implemented at multiple levels of the application to ensure data integrity and security. Input validation is performed on the server-side to prevent invalid data from being processed.</li>
 </ul>
 <h2>Design</h2>
 <h3>Relationship</h3>
