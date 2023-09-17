@@ -29,8 +29,10 @@
 <ul>
     <li><strong>GET /courses</strong>: Retrieve a list of all courses.</li>
     <li><strong>GET /courses/:course_name</strong>: Retrieve information about a specific course.</li>
-    <li><strong>POST /courses</strong>: Create a new course for a student.</li>
+    <li><strong>POST /courses</strong>: Create a new course for students</li>
+    <li><strong>POST /courses/assign/:course_name</strong>Assign a student or students to a specific course</li>
     <li><strong>PUT /courses/:course_name</strong>: Update course information.</li>
+    <li><strong>PUT /courses/unassign/:course_name</strong>: Unassign a student or students from a specific course</li>
     <li><strong>DELETE /courses/:course_name</strong>: Delete a course.</li>
 </ul>
 
@@ -40,11 +42,13 @@
 
 <h3>Student Resource</h3>
 <ul>
-<li><p>Retrieve all students with courses for a specific year:</p></li>
-<pre><code>GET /students?year=&lt;year&gt;</code></pre>
+<li><p>Retrieve all students with courses for all years or for a specific year:</p></li>
+<pre><code>GET /students (For all years)
+GET /students?year=&lt;year&gt; (OPTIONAL, specific years)</code></pre>
 
-<li><p>Retrieve a specific student with courses for a specific year:</p></li>
-<pre><code>GET /students/:student_id?year=&lt;year&gt;</code></pre>
+<li><p>Retrieve a specific student with courses for all years or for a specific year:</p></li>
+<pre><code>GET /students/:student_id (For all years)
+GET /students/:student_id?year=&lt;year&gt;</code></pre>
 
 <li><p><u></u>Create a new student:</p></li>
 <pre><code>POST /students</code></pre>
@@ -85,6 +89,16 @@ Example request body:
     "year": 2023
 }</code></pre>
 
+
+
+<li><p>Assign students to a course:</p></li>
+<pre><code>POST /courses/assign/:course_name</code></pre>
+<pre><code>Example request body:
+{
+    "studentIds": [1 ,2], // number:[] , array of numbers
+}</code></pre>
+
+
 <li><p>Update course information:</p></li>
 <pre><code>PUT /courses/:course_name</code></pre>
 <pre><code>Example request body:
@@ -93,7 +107,14 @@ Example request body:
     "year": 2024
 }</code></pre>
 
-<li><p>Delete a course:</p></li>
+<li><p>Unassign students from course/p></li>
+<pre><code>PUT /courses/unassign/:course_name</code></pre>
+<pre><code>Example request body:
+{
+    "studentsIds": [4], // This is an array of numbers
+}</code></pre>
+
+<li><p>Delete a course and also the records of students assigned to it:</p></li>
 <pre><code>DELETE /courses/:course_name</code></pre>
 </ul>
 <h2>Installation</h2>
