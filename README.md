@@ -22,7 +22,7 @@
 </ul>
 <h2>Design</h2>
 <h3>Relationship</h3>
-    <img src="https://i.imgur.com/z4o4Cta.png" alt="design" ></img>
+    <img src="https://i.imgur.com/ZXxez8S.png" alt="design" ></img>
     <h3>Tables</h3>
     <img src="https://i.imgur.com/eNoe03l.png" alt="design"></img>
 <h2>Resources</h2>
@@ -58,11 +58,11 @@
 <ul>
 <li><p>Retrieve all students with courses for all years or for a specific year:</p></li>
 <pre><code>GET /students (For all years)
-GET /students?year=&lt;year&gt; (OPTIONAL, specific years)</code></pre>
+GET /students?year=&lt;year&gt; (OPTIONAL, specific year)</code></pre>
 
 <li><p>Retrieve a specific student with courses for all years or for a specific year:</p></li>
 <pre><code>GET /students/:student_id (For all years)
-GET /students/:student_id?year=&lt;year&gt;</code></pre>
+GET /students/:student_id?year=&lt;year&gt; (OPTIONAL, specific year)</code></pre>
 
 <li><p><u></u>Create a new student:</p></li>
 <pre><code>POST /students</code></pre>
