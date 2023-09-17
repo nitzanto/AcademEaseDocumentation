@@ -148,10 +148,8 @@ Example request body:
     <li>Navigate to the project directory:</li>
     <pre><code>cd your-repository</code></pre>
     <li>Install the project dependencies:</li>
-    <pre><code>
-npm install
-npm i nest
-</code></pre>
+    <pre><code>npm install
+npm i nest</code></pre>
    <p><strong>*** Make sure to have 2 terminals running: One for the container and a second one for running the application</strong></p>
     <li>Run the DB container with docker-compose in another terminal</li>
     <pre><code>docker-compose up</code></pre>
