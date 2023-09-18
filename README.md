@@ -140,6 +140,7 @@ Example request body:
     <li>MySQL Workbench, DBeaver etc.. for viewing the DB in real-time</li>
     <li>Postman, Insomnia etc.. for API Testing</li>
 </ul>
+    <h3><strong>Please make sure you have the most updated ZIP file on Google Drive since there was a small bug with migration and entities</strong></h3>
 
 <p>To run this project locally, follow these steps:</p>
 
@@ -155,13 +156,15 @@ npm i nest</code></pre>
     <pre><code>docker-compose up</code></pre>
     <li>Connect to the DB through MySQL WorkBench or any other application and then fill in the credentials found at
         the .env file</li>
-    <li>Run the application after connecting to the DB:</li>
+    <li>Run the migration command to genenerate the tables in DB:</li>
+    <pre><code>npm run typeorm:run-migrations</code></pre>
+    <li>Run the application after connecting to the DB & running migrations:</li>
     <pre><code>npm run start:dev</code></pre>
 </ol>
 
+<p>After running the migration the tables are generated and will be visible at MySQL WorkBench</p>
 <p>The API should now be running locally and accessible at <a href="http://localhost:3000">http://localhost:3000</a>.
 </p>
-<p>After running the application the tables are generated and will be visible at MySQL WorkBench</p>
 <p>You may test the API with Postman, Insomnia and look at the changes at real time with MySQL Workbench or any other
     application</p>
 </body>
