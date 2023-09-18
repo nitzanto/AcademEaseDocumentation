@@ -44,7 +44,7 @@
     <li><strong>GET /courses</strong>: Retrieve a list of all courses.</li>
     <li><strong>GET /courses/:course_name</strong>: Retrieve information about a specific course.</li>
     <li><strong>POST /courses</strong>: Create a new course for students</li>
-    <li><strong>POST /courses/assign/:course_name</strong>Assign a student or students to a specific course</li>
+    <li><strong>POST /courses/assign/:course_name: </strong>Assign a student or students to a specific course</li>
     <li><strong>PUT /courses/:course_name</strong>: Update course information.</li>
     <li><strong>PUT /courses/unassign/:course_name</strong>: Unassign a student or students from a specific course</li>
     <li><strong>DELETE /courses/:course_name</strong>: Delete a course.</li>
