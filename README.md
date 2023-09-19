@@ -79,8 +79,8 @@ GET /students/:student_id?year=&lt;year&gt; (OPTIONAL, specific year)</code></pr
 <pre><code>
 Example request body:
 {
-    "first_name": "Updated First Name",
-    "last_name": "Updated Last Name",
+    "firstname": "Updated First Name",
+    "lastname": "Updated Last Name",
     "address": "Updated Address"
 }
 </code></pre>
@@ -156,7 +156,7 @@ npm i nest</code></pre>
     <pre><code>docker-compose up</code></pre>
     <li>Connect to the DB through MySQL WorkBench or any other application and then fill in the credentials found at
         the .env file</li>
-    <li>Run the migration command to genenerate the tables in DB:</li>
+    <li>Run the migration command to generate the tables in DB:</li>
     <pre><code>npm run typeorm:run-migrations</code></pre>
     <li>Run the application after connecting to the DB & running migrations:</li>
     <pre><code>npm run start:dev</code></pre>
